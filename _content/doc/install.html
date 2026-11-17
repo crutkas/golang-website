@@ -243,6 +243,25 @@
         </ol>
       </li>
     </ol>
+    <p>
+      As an optional alternative to the MSI steps above, a
+      <a href="https://github.com/crutkas/WindowsDeveloperConfig-oem/blob/crutkas-devconfig-fork-only-workloads/src/docs/windows-onboarding-preview.md">Windows DevConfig source preview</a>
+      provides a focused Go workload that installs PowerShell 7 and Go, with
+      WinGet prerequisites, rather than a full workstation setup.
+      This personal-fork preview is not a Microsoft-signed release or an
+      official Go recommendation.
+    </p>
+    <p>
+      Review the <a href="https://github.com/crutkas/WindowsDeveloperConfig-oem/pull/2">draft changes</a>,
+      source, package terms, and prerequisites before running it on a disposable
+      Windows development VM. From the reviewed fork checkout's root, run
+      <code>.\src\Workloads\install-source.ps1 -Workload go</code> as described
+      in the preview guide. This runs local, unsigned development source;
+      installers may request elevation. It does not change execution policy.
+      After installation, close and reopen your terminal to pick up
+      <code>PATH</code> changes, then run <code>go version</code> and confirm
+      that it prints the installed version of Go.
+    </p>
   </div>
 </div>
 <h2 id="code">You're all set!</h2>
